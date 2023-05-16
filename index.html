@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<div id="simulateur-tarif-cantine">
-  <label for="quotient-familial">Quotient familial :</label>
+<div id="simulateur-tarif-cantine" class="formulaire">
+  <label for="quotient-familial">Entrez votre quotient familial :</label>
   <input type="number" id="quotient-familial" step="0.01" min="0" />
   <button id="calculer">Calculer</button>
   <div id="resultat">Tarif cantine : <span id="tarif"></span> €</div>
@@ -29,11 +29,23 @@
 
 <style>
     #simulateur-tarif-cantine {
-      max-width: 300px;
-      margin: 0 auto;
+      max-width: 350px;
       padding: 20px;
-      border: 1px solid #ccc;
+      border: 2px solid #868686;
       border-radius: 4px;
+    }
+    .formulaire {
+        font-family : 'calibri';
+    }
+    .formulaire button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
     }
     #resultat {
       margin-top: 10px;
