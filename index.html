@@ -4,14 +4,20 @@
   <label for="quotient-familial">Entrez votre quotient familial :</label>
   <input type="number" id="quotient-familial" step="0.01" min="0" />
   <button id="calculer">Calculer</button>
-  <div id="resultat">Tarif restauration scolaire : <b><span id="tarif"></span> €</b></div>
+  <div id="resultat">Tarif restauration scolaire : <b><span id="tarif"></span></b></div>
 </div>
 </html>
 <script>
-  document.getElementById('calculer').addEventListener('click', function() {
+    document.getElementById('calculer').addEventListener('click', function() {
     var quotientFamilial = parseFloat(document.getElementById('quotient-familial').value);
     var tarif = calculerTarif(quotientFamilial);
-    document.getElementById('tarif').innerText = tarif.toFixed(2);
+    if (quotientFamilial < 0 || isNaN(quotientFamilial)) {
+        document.getElementById('tarif').innerText = "";
+    }
+    if (quotientFamilial >= 0) {
+        document.getElementById('tarif').innerText = tarif.toFixed(2) + " €";
+    }
+    
   });
 
   function calculerTarif(quotientFamilial) {
@@ -63,7 +69,7 @@
         box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
     }
     #resultat {
-      margin-top: 10px;
+      margin-top: 20px;
     }
   </style>
   
