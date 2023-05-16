@@ -4,7 +4,7 @@
   <label for="quotient-familial">Entrez votre quotient familial :</label>
   <input type="number" id="quotient-familial" step="0.01" min="0" />
   <button id="calculer">Calculer</button>
-  <div id="resultat">Tarif cantine : <span id="tarif"></span> €</div>
+  <div id="resultat">Tarif restauration scolaire : <b><span id="tarif"></span> €</b></div>
 </div>
 </html>
 <script>
@@ -56,10 +56,10 @@
         transition-duration: 0.4s;
     }
     .formulaire button:hover {
-    -moz-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
-    -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
-}
+        -moz-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+    }
     #resultat {
       margin-top: 10px;
     }
