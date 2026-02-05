@@ -20,14 +20,14 @@
   });
 
   function calculerTarif(quotientFamilial) {
-    if (quotientFamilial >= 0 & quotientFamilial < 600) {
+    if (quotientFamilial >= 0 & quotientFamilial < 610.80) {
       return 1; // Tranche 1
-    } else if (quotientFamilial >= 600 & quotientFamilial < 800) {
-      return 0.011912*quotientFamilial - 6.15; // Tranche 2
-    } else if (quotientFamilial >= 800 & quotientFamilial < 2060) {
-      return 0.00248*quotientFamilial + 1.40; // Tranche 3
-    } else if (quotientFamilial >= 2060){
-      return 6.51; // Tranche 4
+    } else if (quotientFamilial >= 610.80 & quotientFamilial < 814.4) {
+      return 0.01200*quotientFamilial - 6.33; // Tranche 2
+    } else if (quotientFamilial >= 814.4 & quotientFamilial < 2097.08) {
+      return 0.00248*quotientFamilial + 1.42; // Tranche 3
+    } else if (quotientFamilial >= 2097.08){
+      return 6.62; // Tranche 4
     } else {
       return 0;
     }
